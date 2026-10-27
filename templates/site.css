@@ -164,6 +164,14 @@ body.navopen .mobnav{display:flex}
 .person .ph{aspect-ratio:1/1.14;border-radius:2px;margin-bottom:14px}
 .person .ph::after{content:"HEADSHOT";position:absolute;left:0;right:0;bottom:14px;text-align:center;font-size:.58rem;letter-spacing:.2em;color:rgba(255,255,255,.3);font-weight:700;z-index:3}
 .person .ph i{position:absolute;left:0;top:0;width:100%;height:4px;background:var(--gold);z-index:3}
+.person .ph.has-photo{background-position:center top}
+.person .ph.has-photo::after{content:none}
+.about2{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:start}
+.copy2 p{color:var(--muted);margin-bottom:14px;font-size:1.02rem}
+.diff-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 26px}
+.diff-grid li{position:relative;padding-left:26px;font-size:.95rem;font-weight:600;color:var(--navy);line-height:1.35}
+.diff-grid li::before{content:"✓";position:absolute;left:0;top:0;color:var(--gold-dk);font-weight:800}
+@media (max-width:860px){.about2{grid-template-columns:1fr;gap:28px}.diff-grid{grid-template-columns:1fr}}
 .person b{color:var(--navy);font-size:1.04rem;display:block}
 .person .r{color:var(--blue);font-size:.85rem;font-weight:700}
 .person p{color:var(--muted);font-size:.88rem;margin-top:8px}
