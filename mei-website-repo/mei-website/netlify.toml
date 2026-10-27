@@ -1,7 +1,0 @@
-# Netlify build settings — it runs the Python generator and publishes _site/
-[build]
-  command = "python3 build.py"
-  publish = "_site"
-
-[build.environment]
-  PYTHON_VERSION = "3.11"

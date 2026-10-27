@@ -9,7 +9,7 @@ backend:
 
 # Where photos uploaded through the forms are saved in the repo,
 # and the URL path they live at on the published site.
-media_folder: "mei-website-repo/mei-website/static/uploads"
+media_folder: "static/uploads"
 public_folder: "/uploads"
 
 # Small quality-of-life: show a note on the login screen
@@ -22,7 +22,7 @@ collections:
     label: "Projects"
     label_singular: "Project"
     description: "Each project becomes a card, a map marker, and its own page — automatically."
-    folder: "mei-website-repo/mei-website/content/projects"
+    folder: "content/projects"
     create: true
     delete: true
     extension: "json"
@@ -60,7 +60,7 @@ collections:
     label: "People"
     label_singular: "Person"
     description: "Each person appears in the team grid on the About page."
-    folder: "mei-website-repo/mei-website/content/team"
+    folder: "content/team"
     create: true
     delete: true
     extension: "json"

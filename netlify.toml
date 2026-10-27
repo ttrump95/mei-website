@@ -1,6 +1,7 @@
-# The site source lives in a nested folder; point Netlify at it.
-# command and publish are relative to the base directory.
+# Netlify build settings — it runs the Python generator and publishes _site/
 [build]
-  base = "mei-website-repo/mei-website"
   command = "python3 build.py"
   publish = "_site"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
