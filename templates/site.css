@@ -100,10 +100,10 @@ body.navopen .mobnav{display:flex}
 .stat .l{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:#9fb2c4;margin-top:9px}
 
 /* section shell */
-.block{padding:88px 0}
+.block{padding:72px 0}
 .block.mist{background:var(--mist)}
 .block.navy{background:var(--navy);color:#fff}
-.sec-head{margin-bottom:46px;max-width:64ch}
+.sec-head{margin-bottom:36px;max-width:64ch}
 
 /* services */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 38px}
@@ -115,7 +115,11 @@ body.navopen .mobnav{display:flex}
 
 /* markets */
 .mkt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.mkt{background:#fff;padding:30px 30px;transition:background .18s,transform .18s;position:relative}
+.mkt{background:#fff;padding:30px 30px;transition:background .18s,transform .18s;position:relative;display:block;text-decoration:none}
+.mktsec{scroll-margin-top:84px}
+.mkt-n{display:block;margin-top:14px;font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--gold-dk)}
+.mkt-n.soon{color:var(--muted);font-weight:600}
+.mkt:hover .mkt-n{color:var(--gold)}
 .mkt:hover{background:var(--navy);transform:translateY(-2px);z-index:2}
 .mkt:hover h3,.mkt:hover p,.mkt:hover .ix{color:#fff}
 .mkt:hover .ix{color:var(--gold)}

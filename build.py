@@ -130,8 +130,40 @@ home_featured = (f'<section class="block" id="projects"><div class="wrap">\n'
     f'      <p class="lead">A selection of recent MEP work for state agencies, universities, school systems, and the military.</p></div>\n'
     f'    <div class="proj-grid">{feat_cards}</div>\n'
     f'    <div class="proj-foot"><a href="projects.html" class="btn btn-dark">See All Projects</a></div></div></section>')
+# MARKETS (data-driven from each project's "market" field)
+MARKETS = [
+ ("healthcare","01","Healthcare","Clinical facilities & medical-gas systems",
+   "Patient- and staff-safe environments built on ASHRAE 170 ventilation, reliable medical-gas systems, and resilient power.",
+   lambda m: m.strip().lower()=="healthcare"),
+ ("education","02","Education","K-12 schools & district-wide systems",
+   "Healthy indoor air quality and efficient, low-maintenance HVAC sized for real classroom use and tight school budgets.",
+   lambda m: m.strip().lower()=="education"),
+ ("higher-education","03","Higher Education","University campuses & research space",
+   "Campus-scale mechanical, electrical, and plumbing upgrades coordinated around buildings that never fully shut down.",
+   lambda m: "higher" in m.lower()),
+ ("government-military","04","Government &amp; Military","State, federal & National Guard",
+   "Code-current systems for occupied public and defense facilities, phased to keep mission-critical spaces in service.",
+   lambda m: ("government" in m.lower()) or ("military" in m.lower())),
+ ("historic","05","Historic &amp; Renovation","Capitol-grade modernization",
+   "Modern, compliant systems engineered to fit within and preserve landmark and historically significant buildings.",
+   lambda m: "historic" in m.lower()),
+ ("commercial","06","Commercial","Office, mixed-use & light industrial",
+   "Practical, energy-conscious MEP design for commercial and light-industrial buildings of every size.",
+   lambda m: m.strip().lower()=="commercial"),
+]
+def market_projects(match):
+    return [p for p in sorted(projects, key=lambda x: x.get("year",0), reverse=True) if match(p.get("market",""))]
+
+mkt_cards=""
+for slug,idx,title,short,lead,match in MARKETS:
+    n=len(market_projects(match))
+    cnt=(f'<span class="mkt-n">{n} project{"s" if n!=1 else ""}</span>') if n else '<span class="mkt-n soon">Coming soon</span>'
+    mkt_cards+=(f'<a class="mkt" href="markets.html#{slug}"><div class="ix">{idx}</div>'
+                f'<h3>{title}</h3><p>{esc(short)}</p>{cnt}</a>')
+home_markets = tmpl("home_markets.html").replace("{{MKT_CARDS}}", mkt_cards)
+
 home_body = (tmpl("home_hero.html")+tmpl("home_stats.html")+tmpl("home_services.html")
-            +tmpl("home_markets.html")+home_featured+tmpl("home_about.html")+tmpl("home_cta.html"))
+            +home_markets+home_featured+tmpl("home_about.html")+tmpl("home_cta.html"))
 write("index.html", page("Miller Engineering, Inc. — MEP Consulting Engineers", home_body))
 
 # PROJECTS (map + grid)
@@ -145,7 +177,25 @@ write("projects.html", page("Projects — Miller Engineering", mapsec+gridsec))
 
 # STATIC PAGES
 write("services.html", page("Services — Miller Engineering", tmpl("page_services.html")))
-write("markets.html",  page("Markets — Miller Engineering",  tmpl("page_markets.html")))
+mkt_hero=('\n  <section class="block navy"><div class="wrap" style="max-width:780px">'
+  '<span class="eyebrow dk">Markets We Serve</span>'
+  '<h2 class="sect-title" style="color:#fff">The buildings we know best</h2>'
+  '<p class="lead" style="color:#cdd9e5">Our MEP engineering is shaped by the building types we work in most. '
+  'Each market below carries its own code requirements, and we design to them every day.</p></div></section>')
+mkt_secs=""
+for i,(slug,idx,title,short,lead,match) in enumerate(MARKETS):
+    ps=market_projects(match)
+    grid=(f'<div class="proj-grid">{"".join(card(p) for p in ps)}</div>' if ps
+          else '<p class="lead" style="margin-top:6px">Representative projects coming soon.</p>')
+    mist=" mist" if i%2 else ""
+    mkt_secs+=(f'\n  <section class="block{mist} mktsec" id="{slug}"><div class="wrap">'
+      f'<div class="sec-head"><span class="eyebrow">{idx} · {esc(short)}</span>'
+      f'<h2 class="sect-title">{title}</h2><p class="lead">{esc(lead)}</p></div>'
+      f'{grid}</div></section>')
+mkt_cta=('\n  <section class="cta"><div class="wrap"><div><span class="eyebrow dk">Let\'s Talk</span>'
+  '<h2>Have a project in one of these markets?</h2><p>Tell us about the building and we\'ll scope it with you.</p></div>'
+  '<a href="contact.html" class="btn btn-gold">Start a Conversation</a></div></section>')
+write("markets.html", page("Markets — Miller Engineering", mkt_hero+mkt_secs+mkt_cta))
 write("contact.html",  page("Contact — Miller Engineering",  tmpl("page_contact.html")))
 ty_body = ('\n  <section class="block navy" style="min-height:58vh;display:flex;align-items:center">'
     '<div class="wrap" style="max-width:720px;text-align:center">'
