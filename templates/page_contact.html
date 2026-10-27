@@ -4,18 +4,21 @@
     <p class="lead" style="color:#cdd9e5">Tell us about the building and the scope. We'll get back to you quickly.</p></div></section>
   <section class="block"><div class="wrap"><div class="contact-grid">
     <div class="form">
-      <div class="two">
-        <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
-        <div class="field"><label>Organization</label><input type="text" placeholder="Company or agency"></div>
-      </div>
-      <div class="two">
-        <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
-        <div class="field"><label>Phone</label><input type="tel" placeholder="(304) 000-0000"></div>
-      </div>
-      <div class="field"><label>Project type</label><select><option>Select a service…</option><option>Mechanical / HVAC</option><option>Electrical</option><option>Plumbing</option><option>Assessments & Studies</option><option>Construction Administration</option><option>Energy & Automation</option><option>Other / not sure</option></select></div>
-      <div class="field"><label>Project details</label><textarea placeholder="Building type, location, and what you need engineered…"></textarea></div>
-      <button class="btn btn-gold" type="button" onclick="document.getElementById('cmsg').style.display='block'">Send Message</button>
-      <p id="cmsg" style="display:none;margin-top:14px;color:var(--blue);font-weight:700">✓ In the live site this submits to MEI — wired up in Wix.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Leave this field empty: <input name="bot-field"></label></p>
+        <div class="two">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Organization</label><input type="text" name="organization" placeholder="Company or agency"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@example.com" required></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(304) 000-0000"></div>
+        </div>
+        <div class="field"><label>Project type</label><select name="project-type"><option>Select a service…</option><option>Mechanical / HVAC</option><option>Electrical</option><option>Plumbing</option><option>Assessments &amp; Studies</option><option>Construction Administration</option><option>Energy &amp; Automation</option><option>Other / not sure</option></select></div>
+        <div class="field"><label>Project details</label><textarea name="message" placeholder="Building type, location, and what you need engineered…"></textarea></div>
+        <button class="btn btn-gold" type="submit">Send Message</button>
+      </form>
     </div>
     <div class="cdetails">
       <span class="eyebrow">Reach Us Directly</span>

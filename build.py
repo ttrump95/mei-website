@@ -147,6 +147,16 @@ write("projects.html", page("Projects — Miller Engineering", mapsec+gridsec))
 write("services.html", page("Services — Miller Engineering", tmpl("page_services.html")))
 write("markets.html",  page("Markets — Miller Engineering",  tmpl("page_markets.html")))
 write("contact.html",  page("Contact — Miller Engineering",  tmpl("page_contact.html")))
+ty_body = ('\n  <section class="block navy" style="min-height:58vh;display:flex;align-items:center">'
+    '<div class="wrap" style="max-width:720px;text-align:center">'
+    '<span class="eyebrow dk">Message Sent</span>'
+    '<h2 class="sect-title" style="color:#fff">Thank you — we\'ll be in touch</h2>'
+    '<p class="lead" style="color:#cdd9e5">Your message has been sent to Miller Engineering. '
+    'We\'ll get back to you shortly.</p>'
+    '<div style="margin-top:24px"><a href="index.html" class="btn btn-gold">Back to Home</a> '
+    '&nbsp;<a href="projects.html" class="btn btn-dark">See Our Work</a></div>'
+    '</div></section>')
+write("thank-you.html", page("Thank You — Miller Engineering", ty_body))
 
 # TEAM
 active = sorted([t for t in team if t.get("active", True)], key=lambda x: x.get("sort_order",99))
