@@ -29,6 +29,12 @@ CSS = tmpl("site.css")
 CSS += "\n.logo-img{height:44px;width:auto;display:block}"
 CSS += ("\n.ph.has-photo{background-size:cover;background-position:center}"
         "\n.ph.has-photo::before{background:linear-gradient(180deg,rgba(12,39,64,.10),rgba(12,39,64,.72))}")
+# project photo gallery
+CSS += ("\n.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}"
+        "\n.gitem{display:block;text-decoration:none;color:inherit}"
+        "\n.gitem .gimg{display:block;width:100%;aspect-ratio:4/3;background-size:cover;background-position:center;border-radius:10px;box-shadow:0 2px 10px rgba(12,39,64,.12);transition:transform .2s,box-shadow .2s}"
+        "\n.gitem:hover .gimg{transform:translateY(-3px);box-shadow:0 10px 24px rgba(12,39,64,.22)}"
+        "\n.gitem .gcap{display:block;margin-top:8px;font-size:14px;color:#5a6b7a;line-height:1.4}")
 NAV    = tmpl("nav.html")
 FOOTER = tmpl("footer.html")
 REVEAL = tmpl("reveal.html")
@@ -159,6 +165,21 @@ team_body = tmpl("team_intro.html")+team_grid+tmpl("team_cta.html")
 write("team.html", page("About & Team — Miller Engineering", team_body))
 
 # PROJECT DETAIL PAGES
+def gallery_html(p):
+    out=[]
+    for g in (p.get("gallery") or []):
+        src = g.get("image") if isinstance(g, dict) else g
+        if not src: continue
+        cap = (g.get("caption") if isinstance(g, dict) else "") or ""
+        gcap = f'<span class="gcap">{esc(cap.strip())}</span>' if cap.strip() else ''
+        out.append(f'<a class="gitem" href="{src}" target="_blank" rel="noopener">'
+                   f'<span class="gimg" style="background-image:url(\'{src}\')"></span>{gcap}</a>')
+    if not out: return ''
+    return ('\n  <section class="block"><div class="wrap">\n'
+            '    <div class="sec-head"><span class="eyebrow">Gallery</span>\n'
+            '      <h2 class="sect-title">Project photos</h2></div>\n'
+            f'    <div class="gallery">{"".join(out)}</div></div></section>')
+
 def detail(p):
     related=[q for q in projects if q["slug"]!=p["slug"]][:3]
     rel="".join(card(q) for q in related)
@@ -183,6 +204,7 @@ def detail(p):
     f'    </aside></div>\n'
     f'    <div style="padding-bottom:20px"><a href="projects.html" class="btn btn-dark">← Back to Projects</a></div>\n'
     f'  </div>\n'
+    f'{gallery_html(p)}'
     f'  <section class="block mist"><div class="wrap">\n'
     f'    <div class="sec-head"><span class="eyebrow">More Work</span>\n'
     f'      <h2 class="sect-title">Related projects</h2></div>\n'

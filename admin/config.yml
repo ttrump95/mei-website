@@ -53,7 +53,17 @@ collections:
       - { label: "Longitude", name: "lng", widget: "number", value_type: "float",
           hint: "e.g. -81.6326 (negative for West Virginia)" }
       - { label: "Project photo (optional)", name: "image", widget: "image", required: false,
-          hint: "A wide, high-resolution photo. Optional — a styled placeholder shows if left empty." }
+          hint: "A wide, high-resolution photo. Used as the main card and page banner. Optional — a styled placeholder shows if left empty." }
+      - label: "Photo gallery (optional)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        label_singular: "Photo"
+        summary: "{{fields.caption}}"
+        hint: "Add as many job-site photos as you like. Click 'Add Photo', upload, and drag to reorder. Captions are optional."
+        fields:
+          - { label: "Photo", name: "image", widget: "image" }
+          - { label: "Caption (optional)", name: "caption", widget: "string", required: false }
 
   # ───────────────── PEOPLE ─────────────────
   - name: "team"
