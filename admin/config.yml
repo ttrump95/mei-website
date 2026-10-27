@@ -52,9 +52,9 @@ collections:
           hint: "For the map marker. In Google Maps, right-click the spot → the two numbers are latitude, longitude. e.g. 38.3498" }
       - { label: "Longitude", name: "lng", widget: "number", value_type: "float",
           hint: "e.g. -81.6326 (negative for West Virginia)" }
-      - { label: "Project photo (optional)", name: "image", widget: "image", required: false,
-          hint: "A wide, high-resolution photo. Used as the main card and page banner. Optional — a styled placeholder shows if left empty." }
-      - label: "Photo gallery (optional)"
+      - { label: "Project photo", name: "image", widget: "image", required: false,
+          hint: "A wide, high-resolution photo. Used as the main card and page banner. A styled placeholder shows if left empty." }
+      - label: "Photo gallery"
         name: "gallery"
         widget: "list"
         required: false
@@ -63,7 +63,7 @@ collections:
         hint: "Add as many job-site photos as you like. Click 'Add Photo', upload, and drag to reorder. Captions are optional."
         fields:
           - { label: "Photo", name: "image", widget: "image" }
-          - { label: "Caption (optional)", name: "caption", widget: "string", required: false }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
 
   # ───────────────── PEOPLE ─────────────────
   - name: "team"
@@ -86,5 +86,5 @@ collections:
           hint: "Lower numbers show first. Leadership = 1, 2, 3…" }
       - { label: "Active (show on site)?", name: "active", widget: "boolean", default: true,
           hint: "Uncheck to remove someone from the site without deleting their record." }
-      - { label: "Headshot (optional)", name: "image", widget: "image", required: false,
+      - { label: "Headshot", name: "image", widget: "image", required: false,
           hint: "Square photo works best." }
