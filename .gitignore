@@ -1,0 +1,6 @@
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Generated site output (build.py writes this; Netlify builds it fresh)
+_site/
