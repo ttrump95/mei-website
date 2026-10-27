@@ -4,6 +4,24 @@
   "slug": "capitol-elevators",
   "client": "WV Dept. of Administration",
   "featured": true,
+  "gallery": [
+    {
+      "image": "/uploads/picture16.jpg",
+      "caption": "1"
+    },
+    {
+      "image": "/uploads/picture17.jpg",
+      "caption": "2"
+    },
+    {
+      "image": "/uploads/picture15.jpg",
+      "caption": "3"
+    },
+    {
+      "image": "/uploads/picture14.jpg",
+      "caption": "4"
+    }
+  ],
   "location": "Charleston, WV",
   "title": "WV State Capitol — Elevator Modernization",
   "overview": "MEP design for the modernization of historic passenger elevators in the West Virginia State Capitol, balancing code-current systems with preservation of a landmark building.",
