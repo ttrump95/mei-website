@@ -1,0 +1,80 @@
+# ─────────────────────────────────────────────────────────────
+#  Decap CMS configuration — the form-based editor at /admin
+#  EDIT the "repo:" line below to your GitHub username/repository.
+# ─────────────────────────────────────────────────────────────
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/mei-website   # <-- change to your repo, e.g. ttrump95/mei-website
+  branch: main
+
+# Where photos uploaded through the forms are saved in the repo,
+# and the URL path they live at on the published site.
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+# Small quality-of-life: show a note on the login screen
+site_url: https://millereng.net
+display_url: https://millereng.net
+
+collections:
+  # ───────────────── PROJECTS ─────────────────
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    description: "Each project becomes a card, a map marker, and its own page — automatically."
+    folder: "content/projects"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}}  —  {{location}}"
+    fields:
+      - { label: "Project title", name: "title", widget: "string" }
+      - { label: "URL slug", name: "slug", widget: "string",
+          hint: "lowercase-with-dashes — becomes the page address, e.g. capitol-elevators" }
+      - { label: "Market", name: "market", widget: "select",
+          options: ["Healthcare", "Education", "Higher Education", "Government",
+                    "Military", "Government · Historic", "Commercial"] }
+      - { label: "City (label shown on the map)", name: "city", widget: "string",
+          hint: "e.g. Charleston. Projects in the same city share one map marker." }
+      - { label: "Location (shown on cards)", name: "location", widget: "string",
+          hint: "e.g. Charleston, WV" }
+      - { label: "Year completed", name: "year", widget: "number", value_type: "int", default: 2026 }
+      - { label: "Client", name: "client", widget: "string" }
+      - { label: "Services", name: "services", widget: "string",
+          default: "Mechanical · Electrical · Plumbing" }
+      - { label: "Overview", name: "overview", widget: "text",
+          hint: "One or more paragraphs. Leave a blank line between paragraphs." }
+      - { label: "Feature on the homepage?", name: "featured", widget: "boolean", default: true }
+      - { label: "Latitude", name: "lat", widget: "number", value_type: "float",
+          hint: "For the map marker. In Google Maps, right-click the spot → the two numbers are latitude, longitude. e.g. 38.3498" }
+      - { label: "Longitude", name: "lng", widget: "number", value_type: "float",
+          hint: "e.g. -81.6326 (negative for West Virginia)" }
+      - { label: "Project photo (optional)", name: "image", widget: "image", required: false,
+          hint: "A wide, high-resolution photo. Optional — a styled placeholder shows if left empty." }
+
+  # ───────────────── PEOPLE ─────────────────
+  - name: "team"
+    label: "People"
+    label_singular: "Person"
+    description: "Each person appears in the team grid on the About page."
+    folder: "content/team"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{fields.name}}"
+    identifier_field: "name"
+    summary: "{{name}}  —  {{role}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string", hint: "Include credentials, e.g. Craig Miller, PE" }
+      - { label: "Role / title", name: "role", widget: "string" }
+      - { label: "Short bio", name: "bio", widget: "text" }
+      - { label: "Sort order", name: "sort_order", widget: "number", value_type: "int", default: 10,
+          hint: "Lower numbers show first. Leadership = 1, 2, 3…" }
+      - { label: "Active (show on site)?", name: "active", widget: "boolean", default: true,
+          hint: "Uncheck to remove someone from the site without deleting their record." }
+      - { label: "Headshot (optional)", name: "image", widget: "image", required: false,
+          hint: "Square photo works best." }

@@ -1,0 +1,49 @@
+<section class="block"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Where We've Worked</span>
+      <h2 class="sect-title">A map of our work across West Virginia</h2>
+      <p class="lead">Tap a location to see the project(s) we've delivered there, then open any project for the full story.</p></div>
+    
+    <div class="mapwrap">
+      <div class="mapcol">
+        <div class="mapstage" onclick="if(event.target.closest('svg')&&!event.target.closest('.marker'))mapClear()">
+          {{MAP_SVG}}
+          {{MARKERS}}
+        </div>
+        <div class="mapkey">
+          <span><i class="ki-int"></i>Interstate</span>
+          <span><i class="ki-us"></i>US route</span>
+          <span><i class="ki-st"></i>State highway</span>
+          <span><i class="kc"></i>County lines</span>
+        </div>
+      </div>
+      <div class="projlist">
+        <div class="pl-head"><span class="eyebrow">Our Projects</span>
+          <h3 style="font-size:1.3rem;margin:5px 0 4px">Browse the map</h3>
+          <p style="font-size:.86rem;color:var(--muted);margin:0">Click a project to find it on the map — or click a marker to jump to it here.</p></div>
+        <ul class="pl-list">{{LIST_ITEMS}}</ul>
+      </div>
+    </div>
+    <script>
+    function mapCloseAll(){document.querySelectorAll('.marker.open').forEach(m=>m.classList.remove('open'));}
+    function listClear(){document.querySelectorAll('.pl-item.active').forEach(i=>i.classList.remove('active'));}
+    function mapClear(){mapCloseAll();listClear();}
+    function highlightCity(city,scroll){
+      listClear();let first=null;
+      document.querySelectorAll('.pl-item[data-city="'+city+'"]').forEach(i=>{i.classList.add('active');if(!first)first=i;});
+      if(scroll&&first)first.scrollIntoView({block:'nearest',behavior:'smooth'});
+    }
+    function mapPick(e,el){
+      e.stopPropagation();var was=el.classList.contains('open');
+      mapCloseAll();
+      if(was){listClear();return;}
+      el.classList.add('open');highlightCity(el.dataset.city,true);
+    }
+    function pickProject(li){
+      var city=li.dataset.city;
+      mapCloseAll();listClear();li.classList.add('active');
+      var m=document.querySelector('.marker[data-city="'+city+'"]');
+      if(m)m.classList.add('open');
+    }
+    document.addEventListener('click',function(e){if(!e.target.closest('.marker')&&!e.target.closest('.projlist'))mapClear();});
+    </script>
+  </div></section>
