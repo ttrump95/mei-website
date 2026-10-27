@@ -1,7 +1,35 @@
-<section class="hero"><div class="bg"><span class="tag">PROJECT PHOTO</span></div><div class="wrap">
+<section class="hero"><div class="bg" id="heroBg">
+    <div class="slide on" style="background-image:url('assets/hero-mechanical.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-electrical.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-plumbing.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-fire.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-infrastructure.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-construction.jpg')"></div>
+  </div>
+  <div class="hero-badge"><span class="hb-label" id="heroLabel">Mechanical Design</span><span class="hb-dots" id="heroDots"></span></div>
+  <div class="wrap">
     <span class="eyebrow dk">MEP Consulting Engineers · Since 2003</span>
     <h1>The systems behind the building, <em>done right the first time.</em></h1>
     <p class="lead">Mechanical, electrical, and plumbing engineering for healthcare, education, government, and historic facilities across the Mid-Atlantic.</p>
     <div class="row"><a href="projects.html" class="btn btn-gold">View Our Work</a>
       <a href="contact.html" class="btn btn-ghost">Start a Project</a></div>
   </div></section>
+<script>
+(function(){
+  var bg=document.getElementById('heroBg'); if(!bg) return;
+  var slides=bg.querySelectorAll('.slide');
+  var label=document.getElementById('heroLabel'), dotsWrap=document.getElementById('heroDots');
+  var names=["Mechanical Design","Electrical Design","Plumbing & Piping","Fire Protection","Infrastructure","Construction Administration"];
+  var i=0, timer=null;
+  slides.forEach(function(s,idx){var d=document.createElement('i'); if(idx===0)d.className='on';
+    d.addEventListener('click',function(){go(idx);reset();}); dotsWrap.appendChild(d);});
+  var dots=dotsWrap.querySelectorAll('i');
+  function go(n){ slides[i].classList.remove('on'); dots[i].classList.remove('on');
+    i=(n+slides.length)%slides.length; slides[i].classList.add('on'); dots[i].classList.add('on');
+    if(label){label.style.opacity=0; setTimeout(function(){label.textContent=names[i]; label.style.opacity=1;},300);} }
+  function next(){go(i+1);}
+  function reset(){clearInterval(timer); start();}
+  function start(){ var r=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches; if(!r) timer=setInterval(next,5000); }
+  start();
+})();
+</script>
