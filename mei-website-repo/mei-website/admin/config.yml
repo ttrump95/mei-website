@@ -4,7 +4,7 @@
 # ─────────────────────────────────────────────────────────────
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/mei-website   # <-- change to your repo, e.g. ttrump95/mei-website
+  repo: ttrump95/mei-website   # <-- change to your repo, e.g. ttrump95/mei-website
   branch: main
 
 # Where photos uploaded through the forms are saved in the repo,
