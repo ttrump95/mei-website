@@ -298,3 +298,7 @@ footer a:hover{color:var(--gold)}
   .utility .wrap{flex-direction:column;height:auto;gap:3px;padding-top:7px;padding-bottom:7px;justify-content:center;text-align:center}
   .utility b{white-space:nowrap}
 }
+/* regional map: neighbor states behind WV */
+.mapnbr path{stroke-linejoin:round}
+.nbr-ctx .nbrc{fill:#18222c;stroke:rgba(255,255,255,.05);stroke-width:.5}
+.nbr-svc .svcc{fill:#23496a;stroke:rgba(224,164,59,.45);stroke-width:.8}
