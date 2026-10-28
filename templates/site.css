@@ -302,4 +302,4 @@ footer a:hover{color:var(--gold)}
 .mapbase{fill:#18222c}
 .mapnbr path{stroke-linejoin:round}
 .nbr-ctx .nbrc{fill:#18222c;stroke:rgba(255,255,255,.09);stroke-width:.5}
-.nbr-svc .svcc{fill:#23496a;stroke:rgba(224,164,59,.45);stroke-width:.8}
+.nbr-svc .svcc{fill:#23496a;stroke:rgba(255,255,255,.18);stroke-width:.6}
