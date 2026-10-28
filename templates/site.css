@@ -301,5 +301,5 @@ footer a:hover{color:var(--gold)}
 /* regional map: neighbor states behind WV */
 .mapbase{fill:#18222c}
 .mapnbr path{stroke-linejoin:round}
-.nbr-ctx .nbrc{fill:#18222c;stroke:#18222c;stroke-width:.8}
+.nbr-ctx .nbrc{fill:#18222c;stroke:rgba(255,255,255,.09);stroke-width:.5}
 .nbr-svc .svcc{fill:#23496a;stroke:rgba(224,164,59,.45);stroke-width:.8}
