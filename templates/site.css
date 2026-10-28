@@ -279,7 +279,7 @@ footer a:hover{color:var(--gold)}
 .cdetails .v a{color:var(--navy)}
 .cdetails .v a:hover{color:var(--blue)}
 
-@media(max-width:900px){
+@media (max-width:900px){
   nav.links{display:none}
   .hamburger{display:flex}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
@@ -287,8 +287,9 @@ footer a:hover{color:var(--gold)}
   .stat:nth-child(2){border-right:none}
   .svc-grid,.mkt-grid,.proj-grid,.team-grid{grid-template-columns:1fr 1fr}
   .about,.detail-body{grid-template-columns:1fr;gap:34px}
+  .detail-hero{aspect-ratio:auto}
 }
-@media(max-width:560px){
+@media (max-width:560px){
   .stats .wrap,.svc-grid,.mkt-grid,.proj-grid,.team-grid{grid-template-columns:1fr}
   .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}
   .hero .wrap{padding:78px 30px 84px}
