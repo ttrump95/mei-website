@@ -294,3 +294,7 @@ footer a:hover{color:var(--gold)}
   .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}
   .hero .wrap{padding:78px 30px 84px}
 }
+@media (max-width:640px){
+  .utility .wrap{flex-direction:column;height:auto;gap:3px;padding-top:7px;padding-bottom:7px;justify-content:center;text-align:center}
+  .utility b{white-space:nowrap}
+}
