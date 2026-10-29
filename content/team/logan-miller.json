@@ -3,6 +3,6 @@
   "role": "Guard Dog",
   "bio": "Logan protects the facility from any intruder and inspects any suspicious packaging",
   "sort_order": 5,
-  "active": false,
+  "active": true,
   "image": "/uploads/logan.jpeg"
 }
