@@ -1,8 +1,8 @@
 {
-  "name": "Ebony Miller",
-  "role": "Food Quality Inspector",
-  "bio": "Ebony Inspects and verifies the integrity of any dishes that enter the facility. ",
-  "sort_order": 6,
+  "name": "Cooper Summerfeldt",
+  "role": "Couch Protection Program",
+  "bio": "Cooper ensures the integrity of couch cushions, backs up Logan in enforcement. Finder of lost toys. ",
+  "sort_order": 8,
   "active": true,
-  "image": "/uploads/ebony.jpeg"
+  "image": "/uploads/cooper.jpeg"
 }
