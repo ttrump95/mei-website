@@ -1,7 +1,7 @@
 {
   "name": "Logan Miller",
-  "role": "Guard Dog",
-  "bio": "Logan protects the facility from any intruder and inspects any suspicious packaging",
+  "role": "Pest Control",
+  "bio": "Logan protects the facility from any intruder (rabbits, squirrels, etc.) and inspects any suspicious packaging.",
   "sort_order": 5,
   "active": true,
   "image": "/uploads/logan.jpeg"
