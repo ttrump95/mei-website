@@ -299,6 +299,7 @@ footer a:hover{color:var(--gold)}
   .utility b{white-space:nowrap}
 }
 /* regional map: neighbor states behind WV */
+.crew-head{margin-top:68px;padding-top:52px;border-top:1px solid var(--line)}
 .mapbase{fill:#18222c}
 .mapnbr path{stroke-linejoin:round}
 .nbr-ctx .nbrc{fill:#18222c;stroke:rgba(255,255,255,.09);stroke-width:.5}

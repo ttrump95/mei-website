@@ -90,5 +90,7 @@ collections:
           hint: "Lower numbers show first. Leadership = 1, 2, 3…" }
       - { label: "Active (show on site)?", name: "active", widget: "boolean", default: true,
           hint: "Uncheck to remove someone from the site without deleting their record." }
+      - { label: "Office crew (pet)?", name: "crew", widget: "boolean", default: false, required: false,
+          hint: "Check for the office pups — they appear under 'The Office Crew' instead of with the staff." }
       - { label: "Headshot", name: "image", widget: "image", required: false,
           hint: "Square photo works best." }

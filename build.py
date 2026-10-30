@@ -210,17 +210,25 @@ write("thank-you.html", page("Thank You — Miller Engineering", ty_body))
 
 # TEAM
 active = sorted([t for t in team if t.get("active", True)], key=lambda x: x.get("sort_order",99))
+humans = [t for t in active if not t.get("crew")]
+crew   = [t for t in active if t.get("crew")]
 def person(t):
     img = (f'<div class="ph has-photo" style="background-image:url(\'{t["image"]}\')"><i></i></div>'
            if t.get("image") else '<div class="ph"><i></i></div>')
     return (f'<div class="person">{img}<b>{esc(t["name"])}</b>'
             f'<span class="r">{esc(t["role"])}</span><p>{esc(t["bio"])}</p></div>')
-persons = "".join(person(t) for t in active)
+def grid(items): return f'<div class="team-grid">{"".join(person(t) for t in items)}</div>'
 team_grid = (f'<section class="block"><div class="wrap">\n'
     f'    <div class="sec-head"><span class="eyebrow">Our People</span>\n'
     f'      <h2 class="sect-title">The team</h2>\n'
     f'      <p class="lead">New staff are added here as the firm grows.</p></div>\n'
-    f'    <div class="team-grid">{persons}</div></div></section>')
+    f'    {grid(humans)}')
+if crew:
+    team_grid += (f'\n    <div class="sec-head crew-head"><span class="eyebrow">Off the Clock</span>\n'
+        f'      <h2 class="sect-title">The Office Crew</h2>\n'
+        f'      <p class="lead">Morale, security, and quality control — all handled in house.</p></div>\n'
+        f'    {grid(crew)}')
+team_grid += '</div></section>'
 team_body = tmpl("team_intro.html")+team_grid+tmpl("team_cta.html")
 write("team.html", page("About & Team — Miller Engineering", team_body))
 

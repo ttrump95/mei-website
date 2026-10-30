@@ -4,5 +4,6 @@
   "bio": "Cal is the chief overseer of the property and will sound the alarm at any vehicle, squirrel, groundhog, or bird that enters the premises.",
   "sort_order": 7,
   "active": true,
-  "image": "/uploads/team/cal.jpg"
+  "image": "/uploads/team/cal.jpg",
+  "crew": true
 }
