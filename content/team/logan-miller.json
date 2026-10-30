@@ -1,8 +1,8 @@
 {
   "name": "Logan Miller",
   "role": "Pest Control",
-  "bio": "Logan protects the facility from any intruder (rabbits, squirrels, etc.) and inspects any suspicious packaging.",
+  "bio": "Logan protects the facility from any intruder (rabbits, squirrels, etc.) and inspects any suspicious packages.",
   "sort_order": 5,
   "active": true,
-  "image": "/uploads/logan.jpeg"
+  "image": "/uploads/team/logan.jpg"
 }

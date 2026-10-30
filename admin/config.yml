@@ -23,6 +23,8 @@ collections:
     label_singular: "Project"
     description: "Each project becomes a card, a map marker, and its own page — automatically."
     folder: "content/projects"
+    media_folder: "/static/uploads/projects"
+    public_folder: "/uploads/projects"
     create: true
     delete: true
     extension: "json"
@@ -71,6 +73,8 @@ collections:
     label_singular: "Person"
     description: "Each person appears in the team grid on the About page."
     folder: "content/team"
+    media_folder: "/static/uploads/team"
+    public_folder: "/uploads/team"
     create: true
     delete: true
     extension: "json"

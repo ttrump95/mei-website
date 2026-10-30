@@ -1,0 +1,28 @@
+{
+  "lng": -79.4648,
+  "city": "Davis",
+  "slug": "bwf-lodge",
+  "client": "WV Division of Natural Resources",
+  "featured": false,
+  "gallery": [
+    {
+      "image": "/uploads/projects/bwf-lodge-lighting.jpg",
+      "caption": "Updated Lodge Lighting"
+    },
+    {
+      "image": "/uploads/projects/bwf-lodge-interior.jpg"
+    },
+    {
+      "image": "/uploads/projects/bwf-lodge-canopy.jpg",
+      "caption": "Updated Canopy Lighting"
+    }
+  ],
+  "location": "Davis, WV",
+  "title": "Blackwater Falls State Park Lodge Renovations",
+  "overview": "MEI served on a design team alongside multiple architecture firms for the exterior and interior renovations to the lodge at Blackwater Falls State Park. All 54 guestrooms were completely renovated with new finishes, HVAC, and bathroom upgrades, and four were modified to meet modern ADA guidelines. The lobbies, reception area, and dining rooms were upgraded with new HVAC, lighting, and finishes. The original finned-tube radiation was replaced with new 4-pipe fan coil units, which were tied into the boilers MEI had replaced under a previous project. A new chiller was installed, with pumps and chilled-water piping serving the fan coil units. The guestroom HVAC systems are fan coil units, with ventilation delivered by make-up air units; energy-recovery ventilators pre-condition the outside air so those units run more efficiently.",
+  "image": "/uploads/projects/bwf-lodge-hero.jpg",
+  "market": "Commercial",
+  "year": 2022,
+  "services": "Mechanical · Electrical · Plumbing",
+  "lat": 39.1287
+}

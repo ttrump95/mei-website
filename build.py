@@ -147,8 +147,8 @@ MARKETS = [
  ("historic","05","Historic &amp; Renovation","Capitol-grade modernization",
    "Modern, compliant systems engineered to fit within and preserve landmark and historically significant buildings.",
    lambda m: "historic" in m.lower()),
- ("commercial","06","Commercial","Office, mixed-use & light industrial",
-   "Practical, energy-conscious MEP design for commercial and light-industrial buildings of every size.",
+ ("commercial","06","Commercial","Offices, parks, recreation & hospitality",
+   "Practical, energy-conscious MEP design for commercial, recreation, and hospitality facilities — from offices and light-industrial buildings to state park lodges and public recreation sites.",
    lambda m: m.strip().lower()=="commercial"),
 ]
 def market_projects(match):
