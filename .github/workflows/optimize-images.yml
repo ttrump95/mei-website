@@ -1,0 +1,38 @@
+name: Optimize uploaded images
+
+# Runs whenever a photo lands in the repo (e.g. uploaded through the CMS),
+# resizes/compresses it in place, and commits the lean version back.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "static/uploads/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: optimize-images
+  cancel-in-progress: false
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet Pillow
+      - run: python scripts/optimize_uploads.py
+      - name: Commit optimized images
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "image-optimizer[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Auto-optimize uploaded images"
+            git push
+          else
+            echo "No images needed optimizing."
+          fi
