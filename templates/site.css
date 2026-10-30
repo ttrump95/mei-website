@@ -226,13 +226,13 @@ footer a:hover{color:var(--gold)}
 .mapkey i.ki-us{border-top:2px solid #E6AC57}
 .mapkey i.ki-st{border-top:1.5px solid #c7b291}
 .mapkey i.kc{border-top:1.5px solid #c3cdd6}
-.marker{position:absolute;transform:translate(-50%,-50%);z-index:5}
+.marker{--ms:1;position:absolute;transform:translate(-50%,-50%);z-index:5}
 .marker.open{z-index:40}
-.marker .dot{width:18px;height:18px;border-radius:50%;background:var(--gold);border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35);cursor:pointer;transition:transform .15s}
+.marker .dot{width:calc(18px*var(--ms));height:calc(18px*var(--ms));border-radius:50%;background:var(--gold);border:calc(3px*var(--ms)) solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35);cursor:pointer;transition:transform .15s,width .18s,height .18s}
 .marker .dot:hover,.marker.open .dot{transform:scale(1.25)}
-.marker .dot::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--gold);opacity:.5;animation:pulse 2.2s infinite}
+.marker .dot::after{content:"";position:absolute;inset:calc(-8px*var(--ms));border-radius:50%;border:calc(2px*var(--ms)) solid var(--gold);opacity:.5;animation:pulse 2.2s infinite}
 @keyframes pulse{0%{transform:scale(.7);opacity:.6}70%{transform:scale(1.6);opacity:0}100%{opacity:0}}
-.marker .city{position:absolute;left:50%;top:22px;transform:translateX(-50%);white-space:nowrap;font-size:.72rem;font-weight:700;color:var(--navy);background:rgba(255,255,255,.85);padding:1px 6px;border-radius:3px}
+.marker .city{position:absolute;left:50%;top:22px;transform:translateX(-50%);white-space:nowrap;font-size:calc(.72rem*var(--ms));font-weight:700;color:var(--navy);background:rgba(255,255,255,.85);padding:calc(1px*var(--ms)) calc(6px*var(--ms));border-radius:3px}
 .pop{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);width:250px;background:#fff;border-radius:4px;box-shadow:0 16px 40px -10px rgba(12,39,64,.55);border-top:3px solid var(--gold);padding:14px 16px;z-index:20;display:none;text-align:left}
 .marker.open .pop{display:block}
 .pop .pl{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dk);font-weight:700;margin-bottom:8px}

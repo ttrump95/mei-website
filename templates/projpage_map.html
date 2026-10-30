@@ -46,6 +46,25 @@
     }
     document.addEventListener('click',function(e){if(!e.target.closest('.marker')&&!e.target.closest('.projlist'))mapClear();});
 
+    /* Scale each marker down where pins cluster, up where they're isolated. */
+    function sizeMarkers(){
+      var stage=document.querySelector('.mapstage'); if(!stage)return;
+      var sr=stage.getBoundingClientRect(); if(!sr.width)return;
+      var markers=[].slice.call(stage.querySelectorAll('.marker'));
+      var cen=markers.map(function(m){var d=m.querySelector('.dot').getBoundingClientRect();
+        return {x:d.left-sr.left+d.width/2, y:d.top-sr.top+d.height/2};});
+      var NEAR=40, FAR=105, SMIN=0.70;
+      markers.forEach(function(m,i){
+        var dmin=Infinity;
+        for(var j=0;j<cen.length;j++){ if(j===i)continue;
+          var dx=cen[i].x-cen[j].x, dy=cen[i].y-cen[j].y, d=Math.sqrt(dx*dx+dy*dy);
+          if(d<dmin)dmin=d; }
+        var s=1;
+        if(dmin<FAR) s=SMIN+(1-SMIN)*Math.max(0,Math.min(1,(dmin-NEAR)/(FAR-NEAR)));
+        m.style.setProperty('--ms', s.toFixed(3));
+      });
+    }
+
     /* Automatic label placement: keep each city label clear of other dots and labels. */
     function layoutLabels(){
       var stage=document.querySelector('.mapstage'); if(!stage)return;
@@ -53,7 +72,8 @@
       var markers=[].slice.call(stage.querySelectorAll('.marker'));
       var dots=markers.map(function(m){
         var d=m.querySelector('.dot').getBoundingClientRect();
-        return {cx:d.left-sr.left+d.width/2, cy:d.top-sr.top+d.height/2, r:Math.max(d.width,d.height)/2+6};
+        var ms=parseFloat(getComputedStyle(m).getPropertyValue('--ms'))||1;
+        return {cx:d.left-sr.left+d.width/2, cy:d.top-sr.top+d.height/2, r:9*ms+6};
       });
       var placed=[];
       markers.forEach(function(m,i){
@@ -91,11 +111,12 @@
         placed.push({l:best.lx-w/2,t:best.ly-h/2,r:best.lx+w/2,b:best.ly+h/2});
       });
     }
-    var _llt; function relayout(){clearTimeout(_llt);_llt=setTimeout(layoutLabels,60);}
-    window.addEventListener('load',layoutLabels);
+    function refreshMarkers(){sizeMarkers();layoutLabels();}
+    var _llt; function relayout(){clearTimeout(_llt);_llt=setTimeout(refreshMarkers,60);}
+    window.addEventListener('load',refreshMarkers);
     window.addEventListener('resize',relayout);
-    if(document.readyState!=='loading')layoutLabels(); else document.addEventListener('DOMContentLoaded',relayout);
-    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layoutLabels);
+    if(document.readyState!=='loading')refreshMarkers(); else document.addEventListener('DOMContentLoaded',relayout);
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refreshMarkers);
     if(window.ResizeObserver){var ro=new ResizeObserver(relayout);var st=document.querySelector('.mapstage');if(st)ro.observe(st);}
     </script>
   </div></section>
