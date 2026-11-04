@@ -304,3 +304,6 @@ footer a:hover{color:var(--gold)}
 .mapnbr path{stroke-linejoin:round}
 .nbr-ctx .nbrc{fill:#18222c;stroke:rgba(255,255,255,.09);stroke-width:.5}
 .nbr-svc .svcc{fill:#23496a;stroke:rgba(255,255,255,.18);stroke-width:.6}
+/* State-identity colors (Pennsylvania & Maryland only; others stay neutral) */
+.mapnbr .st-pa{fill:#2f5a9e;stroke:#2f5a9e;stroke-width:2.5;stroke-linejoin:round}  /* Pennsylvania — flag blue */
+.mapnbr .st-md{fill:#9e3b42;stroke:#9e3b42;stroke-width:2.5;stroke-linejoin:round}  /* Maryland — flag/Terrapins red */
