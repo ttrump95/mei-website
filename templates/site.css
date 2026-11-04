@@ -207,8 +207,8 @@ footer a:hover{color:var(--gold)}
 /* interactive WV map */
 .mapwrap{display:grid;grid-template-columns:1.32fr .68fr;gap:38px;align-items:start}
 .mapcol{min-width:0}
-.mapstage{position:relative;width:100%}
-.mapstage svg{width:100%;height:auto;display:block;overflow:visible;filter:drop-shadow(0 12px 26px rgba(12,39,64,.24))}
+.mapstage{position:relative;width:100%;box-shadow:0 12px 26px rgba(12,39,64,.24);contain:layout paint}
+.mapstage svg{width:100%;height:auto;display:block;overflow:visible}
 .cty{fill:#0c2740;stroke:rgba(255,255,255,.15);stroke-width:0.7;stroke-linejoin:round}
 .rd,.cas{fill:none;stroke-linecap:round;stroke-linejoin:round}
 .cas{stroke:#06121f}
@@ -230,7 +230,8 @@ footer a:hover{color:var(--gold)}
 .marker.open{z-index:40}
 .marker .dot{width:calc(18px*var(--ms));height:calc(18px*var(--ms));border-radius:50%;background:var(--gold);border:calc(3px*var(--ms)) solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35);cursor:pointer;transition:transform .15s,width .18s,height .18s}
 .marker .dot:hover,.marker.open .dot{transform:scale(1.25)}
-.marker .dot::after{content:"";position:absolute;inset:calc(-8px*var(--ms));border-radius:50%;border:calc(2px*var(--ms)) solid var(--gold);opacity:.5;animation:pulse 2.2s infinite}
+.marker .dot::after{content:"";position:absolute;inset:calc(-8px*var(--ms));border-radius:50%;border:calc(2px*var(--ms)) solid var(--gold);opacity:.5;animation:pulse 2.2s infinite;will-change:transform,opacity}
+@media (prefers-reduced-motion:reduce){.marker .dot::after{animation:none}}
 @keyframes pulse{0%{transform:scale(.7);opacity:.6}70%{transform:scale(1.6);opacity:0}100%{opacity:0}}
 .marker .city{position:absolute;left:50%;top:22px;transform:translateX(-50%);white-space:nowrap;font-size:calc(.72rem*var(--ms));font-weight:700;color:var(--navy);background:rgba(255,255,255,.85);padding:calc(1px*var(--ms)) calc(6px*var(--ms));border-radius:3px}
 .pop{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);width:250px;background:#fff;border-radius:4px;box-shadow:0 16px 40px -10px rgba(12,39,64,.55);border-top:3px solid var(--gold);padding:14px 16px;z-index:20;display:none;text-align:left}
