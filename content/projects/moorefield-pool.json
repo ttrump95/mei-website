@@ -1,0 +1,16 @@
+{
+  "title": "Moorefield City Pool",
+  "slug": "moorefield-pool",
+  "market": "Commercial",
+  "city": "Moorefield",
+  "location": "Moorefield, WV",
+  "year": 2015,
+  "client": "Moorefield Parks & Recreation",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Pool Systems",
+  "overview": "The pool's undersized, freeze-broken supply piping was leaking 3\u20135 inches a day with poor water quality that often closed the diving well. MEI separated the wading and main pools onto dedicated filtration, re-designed the piping to fully drain each season, and added liquid-chemical feed systems \u2014 and attendance has since risen significantly.",
+  "featured": false,
+  "lat": 39.059,
+  "lng": -78.969,
+  "image": "/uploads/projects/moorefield-pool-hero.jpg",
+  "gallery": []
+}

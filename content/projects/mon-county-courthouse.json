@@ -1,0 +1,16 @@
+{
+  "title": "Monongalia County Courthouse HVAC",
+  "slug": "mon-county-courthouse",
+  "market": "Government & Military",
+  "city": "Morgantown",
+  "location": "Morgantown, WV",
+  "year": 2016,
+  "client": "Monongalia County",
+  "services": "Mechanical \u00b7 Electrical",
+  "overview": "The courthouse had drawn steam heat from a highly inefficient boiler in the adjacent, now-closed jail, leaving part of the building unheated once the jail was removed. MEI installed new high-efficiency boilers and a heating-and-cooling system tied into existing systems, and provided the energy-savings calculations that helped the county win an efficiency grant.",
+  "featured": false,
+  "lat": 39.629,
+  "lng": -79.956,
+  "image": "/uploads/projects/mon-county-courthouse-hero.jpg",
+  "gallery": []
+}

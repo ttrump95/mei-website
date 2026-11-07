@@ -1,0 +1,16 @@
+{
+  "title": "Grant County Bank Addition & Renovations",
+  "slug": "grant-county-bank",
+  "market": "Commercial",
+  "city": "Petersburg",
+  "location": "Petersburg, WV",
+  "year": 2024,
+  "client": "Grant County Bank",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Fire Alarm",
+  "overview": "A 3,200 SF addition with a new main lobby, teller space, drive-through, and offices, plus a new fire-alarm system and LED retrofit for the original 13,400 SF building. A backup generator serves the drive-through, teller area, security, and data servers; construction was phased so the original drive-through stayed open until the new one was ready.",
+  "featured": false,
+  "lat": 38.991,
+  "lng": -79.123,
+  "image": "/uploads/projects/grant-county-bank-hero.jpg",
+  "gallery": []
+}

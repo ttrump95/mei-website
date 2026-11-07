@@ -1,0 +1,16 @@
+{
+  "title": "WV Wildlife Center Electrical Repairs",
+  "slug": "wv-wildlife-center",
+  "market": "Commercial",
+  "city": "French Creek",
+  "location": "French Creek, WV",
+  "year": 2019,
+  "client": "WV Division of Natural Resources",
+  "services": "Backup Power \u00b7 Electrical",
+  "overview": "A grounding-and-bonding concern revealed widespread deficiencies in the distribution system serving the Wildlife Center's animal enclosures. MEI fast-tracked a replacement system with a dedicated mini-power center at each enclosure \u2014 isolating any failure to one enclosure \u2014 plus an emergency generator maintaining security for animals and guests.",
+  "featured": false,
+  "lat": 38.72,
+  "lng": -80.3,
+  "image": "/uploads/projects/wv-wildlife-center-hero.jpg",
+  "gallery": []
+}

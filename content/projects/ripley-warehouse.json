@@ -1,0 +1,16 @@
+{
+  "title": "WV Agriculture Ripley Warehouse Electrical Upgrade",
+  "slug": "ripley-warehouse",
+  "market": "Government & Military",
+  "city": "Ripley",
+  "location": "Ripley, WV",
+  "year": 2020,
+  "client": "WV Department of Agriculture",
+  "services": "Backup Power \u00b7 Electrical",
+  "overview": "The state's food-distribution warehouse \u2014 with ~20,000 SF of cooler/freezer space serving WV K-12 schools \u2014 needed more capacity for expanded refrigeration. MEI increased the service from 1,200 to 3,000 amps, housed the new gear in a pre-fabricated building, split the distribution to reuse the existing generator, and added a second for a phased, outage-minimizing cutover.",
+  "featured": false,
+  "lat": 38.819,
+  "lng": -81.709,
+  "image": "/uploads/projects/ripley-warehouse-hero.jpg",
+  "gallery": []
+}

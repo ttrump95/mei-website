@@ -1,0 +1,16 @@
+{
+  "title": "Elkins DNR Operations Center Standby Generator",
+  "slug": "elkins-dnr-generator",
+  "market": "Government & Military",
+  "city": "Elkins",
+  "location": "Elkins, WV",
+  "year": 2015,
+  "client": "WV Division of Natural Resources",
+  "services": "Backup Power \u00b7 Electrical \u00b7 Emergency Lighting",
+  "overview": "After a long outage from Hurricane Sandy, the DNR Operations Center needed standby power. MEI added critical-load panels fed through a transfer switch and a natural-gas generator \u2014 modifying the building's gas service \u2014 and retrofitted select fixtures to battery-backup LEDs for emergency lighting in common areas.",
+  "featured": false,
+  "lat": 38.925,
+  "lng": -79.847,
+  "image": "/uploads/projects/elkins-dnr-generator-hero.jpg",
+  "gallery": []
+}

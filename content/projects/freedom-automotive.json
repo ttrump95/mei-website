@@ -1,0 +1,16 @@
+{
+  "title": "Freedom Automotive Dealerships",
+  "slug": "freedom-automotive",
+  "market": "Commercial",
+  "city": "Granville",
+  "location": "Granville, WV",
+  "year": 2024,
+  "client": "Freedom Automotive",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Building Automation \u00b7 Fire Protection",
+  "overview": "Full MEP design for three new dealerships \u2014 Ford, Kia, and Volkswagen \u2014 built as a campus where the Ford building acts as the hub and sub-feeds the others, requiring interconnecting utilities. The Ford store uses waste-oil boilers and radiant in-floor heat; MEI also designed a related stand-alone Kia dealership in Clarksburg.",
+  "featured": false,
+  "lat": 39.645,
+  "lng": -79.984,
+  "image": "/uploads/projects/freedom-automotive-hero.jpg",
+  "gallery": []
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Jenkins Subaru Dealership Addition",
+  "slug": "jenkins-subaru",
+  "market": "Commercial",
+  "city": "Bridgeport",
+  "location": "Bridgeport, WV",
+  "year": 2018,
+  "client": "Jenkins Subaru",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Fire Alarm",
+  "overview": "An 8,400 SF addition to the Jenkins Subaru & Hyundai dealership \u2014 a service drop-off, new-car showroom, quick-lube area, and Subaru lounge and service reception \u2014 with new HVAC, electrical, fire alarm, plumbing, and LED lighting, plus upgraded electric and natural-gas services to the facility.",
+  "featured": false,
+  "lat": 39.286,
+  "lng": -80.256,
+  "image": "/uploads/projects/jenkins-subaru-hero.jpg",
+  "gallery": []
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Glenville Water Treatment Plant Generator",
+  "slug": "glenville-wtp-generator",
+  "market": "Government & Military",
+  "city": "Glenville",
+  "location": "Glenville, WV",
+  "year": 2015,
+  "client": "City of Glenville",
+  "services": "Backup Power \u00b7 Electrical Service Upgrade",
+  "overview": "Backup power to keep water treatment running, sized to start a large pump serving the nearby federal correctional institute while fitting a very tight site. MEI staged the pump start-up sequence to size the generator at 500 kW, added a service-rated automatic transfer switch, and trained plant staff on the timed start sequence.",
+  "featured": false,
+  "lat": 38.934,
+  "lng": -80.838,
+  "image": "/uploads/projects/glenville-wtp-generator-hero.jpg",
+  "gallery": []
+}
