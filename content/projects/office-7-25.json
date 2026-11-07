@@ -1,14 +1,14 @@
 {
-  "title": "State Office Buildings 7 & 25 — Elevators",
+  "title": "State Office Buildings 7 & 25 \u2014 Elevators",
   "slug": "office-7-25",
   "market": "Government",
   "city": "Charleston",
   "location": "Charleston, WV",
   "year": 2023,
   "client": "WV General Services Division",
-  "services": "Mechanical · Electrical · Plumbing",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing",
   "overview": "Electrical and mechanical engineering for elevator modernization in two occupied state office towers, phased to keep the buildings in service.",
-  "featured": true,
+  "featured": false,
   "lat": 38.3498,
   "lng": -81.6326,
   "image": ""

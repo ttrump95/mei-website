@@ -8,7 +8,7 @@
   "client": "WV General Services Division",
   "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Energy Study",
   "overview": "To cut the peak-demand electrical costs of the 20-year-old plant serving the State Capitol Complex, MEI designed medium-voltage natural-gas generators that run select chillers during peak demand, with 5kV switchgear and a new 2,300 SF plant building. Completed May 2022.",
-  "featured": false,
+  "featured": true,
   "lat": 38.3378,
   "lng": -81.6115,
   "image": "/uploads/projects/capital-complex-chiller-hero.jpg",

@@ -8,7 +8,7 @@
   "client": "AOR Group",
   "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Nurse Call \u00b7 Fire Protection",
   "overview": "A 67,000 SF surgical rehabilitation hospital where every system was designed to precise health-care compliance standards \u2014 ventilation, electrical, plumbing, HVAC, and medical-gas safety. Intensive site visits and real-time coordination with the contractor kept a fast-paced, regulation-driven schedule on track.",
-  "featured": false,
+  "featured": true,
   "lat": 40.174,
   "lng": -80.2462,
   "image": "/uploads/projects/advanced-surgical-hospital-hero.jpg",

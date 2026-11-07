@@ -1,14 +1,14 @@
 {
-  "title": "Clinical Facility — MEP & Medical Gas",
+  "title": "Clinical Facility \u2014 MEP & Medical Gas",
   "slug": "clinical-medgas",
   "market": "Healthcare",
   "city": "Beckley",
   "location": "West Virginia",
   "year": 2024,
   "client": "Regional Health System",
-  "services": "Mechanical · Electrical · Plumbing",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing",
   "overview": "Full MEP and medical-gas system design for a clinical care facility, engineered to ASHRAE 170 ventilation targets for patient and staff safety.",
-  "featured": true,
+  "featured": false,
   "lat": 37.7782,
   "lng": -81.1873,
   "image": ""
