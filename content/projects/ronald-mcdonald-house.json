@@ -1,0 +1,16 @@
+{
+  "title": "Ronald McDonald House Renovation & Addition",
+  "slug": "ronald-mcdonald-house",
+  "market": "Healthcare",
+  "city": "Morgantown",
+  "location": "Morgantown, WV",
+  "year": 2025,
+  "client": "Ronald McDonald House Charities",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Fire Protection",
+  "overview": "An addition and renovation adding laundry facilities and guest rooms while replacing aging PTAC units and furnaces with a new hydronic system of chiller, boilers, and fan-coil units. Upgraded electrical service, replaced fire-alarm and security systems, and a new elevator made the house ADA-compliant \u2014 all phased so it stayed in operation throughout. Completed Spring 2025.",
+  "featured": false,
+  "lat": 39.6556,
+  "lng": -79.9566,
+  "image": "/uploads/projects/ronald-mcdonald-house-hero.jpg",
+  "gallery": []
+}

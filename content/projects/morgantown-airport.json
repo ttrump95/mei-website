@@ -1,0 +1,16 @@
+{
+  "title": "Morgantown Municipal Airport Terminal",
+  "slug": "morgantown-airport",
+  "market": "Commercial",
+  "city": "Morgantown",
+  "location": "Morgantown, WV",
+  "year": 2016,
+  "client": "Morgantown Municipal Airport",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Fire Alarm",
+  "overview": "A phased terminal renovation that maximized reuse of existing HVAC \u2014 reconfiguring the VAV system to serve newly subdivided terminal offices and the fixed-base operator \u2014 replaced an insufficient fire-alarm system, and upgraded electrical distribution for both the airport and FBO while creating new, more efficient office and rental space.",
+  "featured": false,
+  "lat": 39.6429,
+  "lng": -79.9163,
+  "image": "/uploads/projects/morgantown-airport-hero.jpg",
+  "gallery": []
+}

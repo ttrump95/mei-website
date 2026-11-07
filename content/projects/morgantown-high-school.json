@@ -1,0 +1,16 @@
+{
+  "title": "Morgantown High School HVAC Renovation",
+  "slug": "morgantown-high-school",
+  "market": "Education",
+  "city": "Morgantown",
+  "location": "Morgantown, WV",
+  "year": 2017,
+  "client": "Monongalia County Schools",
+  "services": "Mechanical \u00b7 Electrical \u00b7 Plumbing \u00b7 Fire Alarm",
+  "overview": "The 40-year-old steam boiler plant had outlived its life and ran well below load efficiency after earlier upgrades shifted heating demand. MEI replaced the oversized boilers with high-efficiency models, modernized obsolete classroom DX units to meet current ventilation standards, and brought heating-only rooms under proper control. Completed Fall 2017.",
+  "featured": false,
+  "lat": 39.6505,
+  "lng": -79.947,
+  "image": "/uploads/projects/morgantown-high-school-hero.jpg",
+  "gallery": []
+}
