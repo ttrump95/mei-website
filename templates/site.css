@@ -207,7 +207,7 @@ footer a:hover{color:var(--gold)}
 /* interactive WV map */
 .mapwrap{display:grid;grid-template-columns:1.32fr .68fr;gap:38px;align-items:start}
 .mapcol{min-width:0}
-.mapstage{position:relative;width:100%;box-shadow:0 12px 26px rgba(12,39,64,.24);contain:layout paint}
+.mapstage{position:relative;width:100%;box-shadow:0 12px 26px rgba(12,39,64,.24)}
 .mapstage svg{width:100%;height:auto;display:block;overflow:visible}
 .cty{fill:#0c2740;stroke:rgba(255,255,255,.15);stroke-width:0.7;stroke-linejoin:round}
 .rd,.cas{fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -242,6 +242,8 @@ footer a:hover{color:var(--gold)}
 .pop a.pj:hover{color:var(--blue)}
 .pop a.pj span{display:block;font-weight:400;color:var(--muted);font-size:.78rem;margin-top:2px}
 .pop .arr{position:absolute;left:50%;bottom:-8px;transform:translateX(-50%) rotate(45deg);width:14px;height:14px;background:#fff}
+.pop.below{bottom:auto;top:30px}
+.pop.below .arr{bottom:auto;top:-8px}
 .projlist{display:flex;flex-direction:column;min-width:0}
 .pl-head{margin-bottom:14px}
 .pl-list{list-style:none;margin:0;padding:0;overflow-y:auto;max-height:560px;border:1px solid var(--line);border-radius:3px}

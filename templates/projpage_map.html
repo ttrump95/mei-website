@@ -32,17 +32,36 @@
       document.querySelectorAll('.pl-item[data-city="'+city+'"]').forEach(i=>{i.classList.add('active');if(!first)first=i;});
       if(scroll&&first)first.scrollIntoView({block:'nearest',behavior:'smooth'});
     }
+    // Keep an opened popup fully inside the map box (shift at side edges, flip down near the top).
+    function positionPop(m){
+      var pop=m.querySelector('.pop'); if(!pop)return;
+      var arr=pop.querySelector('.arr');
+      var stage=document.querySelector('.mapstage'); if(!stage)return;
+      pop.classList.remove('below');
+      pop.style.transform='translateX(-50%)';
+      if(arr)arr.style.left='50%';
+      var sr=stage.getBoundingClientRect();
+      var pr=pop.getBoundingClientRect();
+      if(pr.top < sr.top+6){ pop.classList.add('below'); pr=pop.getBoundingClientRect(); }
+      var pad=8, shift=0;
+      if(pr.left < sr.left+pad) shift=(sr.left+pad)-pr.left;
+      else if(pr.right > sr.right-pad) shift=(sr.right-pad)-pr.right;
+      if(shift){
+        pop.style.transform='translateX(calc(-50% + '+shift.toFixed(1)+'px))';
+        if(arr)arr.style.left='calc(50% - '+shift.toFixed(1)+'px)';
+      }
+    }
     function mapPick(e,el){
       e.stopPropagation();var was=el.classList.contains('open');
       mapCloseAll();
       if(was){listClear();return;}
-      el.classList.add('open');highlightCity(el.dataset.city,true);
+      el.classList.add('open');positionPop(el);highlightCity(el.dataset.city,true);
     }
     function pickProject(li){
       var city=li.dataset.city;
       mapCloseAll();listClear();li.classList.add('active');
       var m=document.querySelector('.marker[data-city="'+city+'"]');
-      if(m)m.classList.add('open');
+      if(m){m.classList.add('open');positionPop(m);}
     }
     document.addEventListener('click',function(e){if(!e.target.closest('.marker')&&!e.target.closest('.projlist'))mapClear();});
 
