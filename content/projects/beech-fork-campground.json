@@ -1,0 +1,16 @@
+{
+  "title": "Beech Fork Campground Electrical",
+  "slug": "beech-fork-campground",
+  "market": "Commercial",
+  "city": "Barboursville",
+  "location": "Barboursville, WV",
+  "year": 2019,
+  "client": "WV Division of Natural Resources",
+  "services": "Electrical",
+  "overview": "New power distribution for the 39 campsites at Beech Fork's Moxley Branch \u2014 service equipment, distribution panels, and RV-ready pedestals, maximizing larger 50-amp sites within budget. With the campground sitting ~30 ft below the 100-year floodplain and overhead service prohibited, MEI designed a tower to raise the service disconnect above the floodplain, with shunt-trip capability for emergency remote shutdown.",
+  "featured": false,
+  "lat": 38.301,
+  "lng": -82.322,
+  "image": "/uploads/projects/beech-fork-campground-hero.jpg",
+  "gallery": []
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Huntington Floodwall Pump Station Automation",
+  "slug": "huntington-floodwall",
+  "market": "Government & Military",
+  "city": "Huntington",
+  "location": "Huntington, WV",
+  "year": 2021,
+  "client": "Huntington Stormwater Utility",
+  "services": "Electrical \u00b7 Controls \u00b7 Backup Power",
+  "overview": "Automation upgrades for the seventeen floodwall pump stations protecting Huntington. Cellular SCADA units monitor the large storm-water and sewage pumps, their belt-oiler systems, and run time, and replace the old mercury floats with transducer-based level sensing. Each station gets a new electrical service with a service-rated manual transfer switch so staff can connect a portable generator to keep monitoring online.",
+  "featured": false,
+  "lat": 38.4192,
+  "lng": -82.4452,
+  "image": "/uploads/projects/huntington-floodwall-hero.jpg",
+  "gallery": []
+}
