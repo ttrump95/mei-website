@@ -300,6 +300,8 @@ footer a:hover{color:var(--gold)}
 @media (max-width:640px){
   .utility .wrap{flex-direction:column;height:auto;gap:3px;padding-top:7px;padding-bottom:7px;justify-content:center;text-align:center}
   .utility b{white-space:nowrap}
+  /* smaller map labels on phones so dense/edge pins stay inside the box */
+  .marker .city{font-size:calc(.6rem*var(--ms));padding:calc(1px*var(--ms)) calc(4px*var(--ms));letter-spacing:-.01em}
 }
 /* regional map: neighbor states behind WV */
 .crew-head{margin-top:68px;padding-top:52px;border-top:1px solid var(--line)}

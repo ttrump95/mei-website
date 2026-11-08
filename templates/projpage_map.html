@@ -124,6 +124,9 @@
         }
         var best=cands[0],bs=score(cands[0]);
         for(var k=1;k<cands.length;k++){var s=score(cands[k]); if(s<bs-0.5){bs=s;best=cands[k];}}
+        // never let a label spill outside the map box — clamp its center so the whole label stays inside
+        best.lx=Math.max(w/2+1, Math.min(sr.width-w/2-1, best.lx));
+        best.ly=Math.max(h/2+1, Math.min(sr.height-h/2-1, best.ly));
         var dx=best.lx-c.cx, dy=best.ly-c.cy;
         lab.style.left='50%'; lab.style.top='50%';
         lab.style.transform='translate(calc(-50% + '+dx.toFixed(1)+'px), calc(-50% + '+dy.toFixed(1)+'px))';
